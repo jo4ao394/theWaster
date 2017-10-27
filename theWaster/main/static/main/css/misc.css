@@ -1,0 +1,72 @@
+.border {
+  border: 1px solid red;
+}
+
+.width10 {
+  width: 10%;
+}
+
+.width20 {
+  width: 20%;
+}
+
+.width30 {
+  width: 30%;
+}
+
+.width40 {
+  width: 40%;
+}
+
+.width50 {
+  width: 50%;
+}
+
+.width60 {
+  width: 60%;
+}
+
+.width70 {
+  width: 70%;
+}
+
+.width80 {
+  width: 80%;
+}
+
+.width90 {
+  width: 190%;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.floatLeft {
+  float: left;
+}
+
+.floatRight {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.displayBlock {
+  display: block;
+}
+
+.displayInlineBlock {
+  display: inlindblock;
+}
+
+.textAlignCenter {
+  text-align: center;
+}
+
+.textAlignRight {
+  text-align: right;
+}
+

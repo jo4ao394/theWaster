@@ -1,0 +1,59 @@
+<!doctype html>
+{% load staticfiles %}
+<html>
+<head>
+<title>theWaster</title>
+<meta charset=utf-8>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.css>
+<link rel="stylesheet"  href="{% static 'main/css/reset.css' %}">
+<link rel="stylesheet"  href="{% static 'main/css/normalize.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+<link rel="stylesheet"  href="{% static 'main/css/menu.css' %}">
+<link rel="stylesheet"  href="{% static 'main/css/messages.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/button.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/pagination.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/form.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/search.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/table.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/misc.css' %}">
+{% block css %}{% endblock %}
+</head>
+<body class= border>
+  <div id="logo">
+    <img src="{% static 'main/img/theWaster.gif' %}">
+  </div>
+  <div id="toolIcon" class='width60 floatLeft'>
+    <ul>
+      <li><a href=http://120.110.20.27/news/ ><img src="{% static 'main/img/chat.png' %}"><p>聊聊</p></a></li>
+      <li><a href=# ><img src="{% static 'main/img/post.png' %}"><p>帖子</p></a></li>
+      <li><a href=# ><img src="{% static 'main/img/pen.png' %}"><p>發文</p></a></li>
+    </ul>
+  </div>
+  <div id="mainform" class='width40 floatLeft form' >
+    <form method="post" action="/account/login/">
+      <p>帳號：<input type="text" name="username"></p>
+      <p>密碼：<input type="password" name="password"></p>
+      <p><input class="btn" type="submit" value="登入"></p>
+    </form>
+  </div>
+  <!-- try -->
+  <div class=clear></div>
+  <footer>
+  </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="{% static 'main/js/fullDiv.js' %}"></script>
+
+
+<!-- <script src="{% static 'main/js/menu.js' %}"></script>
+<script src="{% static 'main/js/date.js' %}"></script>
+<script src="{% static 'main/js/msg.js' %}"></script>
+<script src="{% static 'main/js/search.js' %}"></script>
+<script src="{% static 'main/js/datepicker.js' %}"></script> -->
+{% block script %}{% endblock %}
+  
+</body>
+</html>

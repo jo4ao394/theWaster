@@ -1,0 +1,27 @@
+.form{
+  background-color: lightgray;
+  /* height:21em; */
+  margin: 0;
+}
+
+form {
+  margin-left: 2em;
+}
+
+form p {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+form input {
+  font-size: 1.2em;
+  margin-top: 1em;
+  background-color: #fff;
+  width: 50%;
+}
+
+.btn{
+  float: right;
+  width: 20%;
+}
+

@@ -22,6 +22,10 @@ class Article(models.Model):
         return self.title
 
 
+class badArticle(models.Model):
+    edition = models.ForeignKey(Article)
+    bad = models.ManyToManyField(User) #廢
+
 class Comment(models.Model):
     article = models.ForeignKey(Article) 
     user =  models.ForeignKey(User) #留言者

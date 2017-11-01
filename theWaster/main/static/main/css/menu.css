@@ -1,7 +1,6 @@
 .logo{
   float: left;
-  width: 10%;
-  border: 1px solid red;
+  width: 15%;
 }
 
 .logo a img{
@@ -10,7 +9,7 @@
 
 .menu {
   float: left;
-  margin: 0 0 0 25%;
+  margin: 0 0 0 17%;
 }
 
 ul.menu li { 
@@ -21,7 +20,7 @@ ul.menu li a {
   display: block;
   color: #eee;
   text-decoration: none;
-  padding: 0.5em 3em;
+  padding: 1em 3em;
   font-size: 1.5em;
   
 }
@@ -32,26 +31,37 @@ ul.menu li :hover {
 
 .account{
   float: right;
-  margin: 0;
-  width: 10%;
+  margin: 0 ;
+  width: 15%;
 }
 
 ul.account li{
   display: inline-block;
-  width: 45%;
-  margin-top: 1em;
+  width: 25%;
+  margin:1em;
 }
 
 ul.account li a.logout {
   background: url("../img/logout1.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  padding: 1em;
+  display: block;
+  padding: 1.8em 0.5em;
 }
 
 ul.account li a.logout:hover {
   background: url("../img/logout2.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  padding: 1em;
+}
+
+ul.account li a.accountIcon {
+  background: url("../img/account.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: block;
+  padding: 1.5em 0.5em;
+  border-radius:4em;
+  border: solid 3px #FFF;
+  
 }

@@ -59,7 +59,14 @@ header {
 
 
 #content {
-  min-height:90%;
+  min-height:80%;
+  background: linear-gradient(45deg, #959595 0%,#0d0d0d 19%,#010101 50%,#0a0a0a 53%,#383838 73%,#4e4e4e 89%,#4e4e4e 89%,#1b1b1b 100%);
+  opacity:0.8;
+}
+
+footer {
+  height: 10em;
+  background: black;
 }
 
 

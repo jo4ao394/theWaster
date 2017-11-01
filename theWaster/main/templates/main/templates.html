@@ -1,0 +1,51 @@
+<!doctype html>
+{% load staticfiles %}
+<html>
+<head>
+<title>theWaster</title>
+<meta charset=utf-8>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.css>
+<link rel="stylesheet"  href="{% static 'main/css/reset.css' %}">
+<link rel="stylesheet"  href="{% static 'main/css/normalize.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+<link rel="stylesheet"  href="{% static 'main/css/menu.css' %}">
+<link rel="stylesheet"  href="{% static 'main/css/messages.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/button.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/pagination.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/form.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/search.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/table.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/misc.css' %}">
+{% block css %}{% endblock %}
+</head>
+<body>
+  <header>
+    <div class=logo>
+      <a href="{% url 'main:main' %}"><img src="{% static 'main/img/logo2.png' %}"></a>
+    </div>
+    <ul class="menu">
+      <li><a href=#> 聊聊</a></li>
+      <li><a href=#> 帖子</a></li>
+      <li><a href=#> 遊戲</a></li>
+    </ul>
+    <ul class=account>
+      <li><a class=logout href=#></a></li>
+      <li><a href=#></a></li>
+    </ul>
+    <div class=clear></div>
+  </header>
+  
+  <div id=content>{% block content %}{% endblock %}</div>
+  
+  <footer>
+    <p> 我是底部</p>
+  </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+{% block script %}{% endblock %}
+  
+</body>
+</html>

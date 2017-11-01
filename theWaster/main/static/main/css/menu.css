@@ -1,0 +1,57 @@
+.logo{
+  float: left;
+  width: 10%;
+  border: 1px solid red;
+}
+
+.logo a img{
+  width: 100%;
+}
+
+.menu {
+  float: left;
+  margin: 0 0 0 25%;
+}
+
+ul.menu li { 
+  display: inline-block;
+}
+
+ul.menu li a {
+  display: block;
+  color: #eee;
+  text-decoration: none;
+  padding: 0.5em 3em;
+  font-size: 1.5em;
+  
+}
+
+ul.menu li :hover {
+  background: #555 ;
+}
+
+.account{
+  float: right;
+  margin: 0;
+  width: 10%;
+}
+
+ul.account li{
+  display: inline-block;
+  width: 45%;
+  margin-top: 1em;
+}
+
+ul.account li a.logout {
+  background: url("../img/logout1.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 1em;
+}
+
+ul.account li a.logout:hover {
+  background: url("../img/logout2.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 1em;
+}

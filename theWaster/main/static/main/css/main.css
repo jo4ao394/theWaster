@@ -9,6 +9,10 @@ html,body{
   height: 100%;
 }
 
+header {
+  background: black;
+}
+
 #logo {
   width: 100%;
 /*   height: 100vh; */
@@ -21,21 +25,18 @@ html,body{
   width: 100%;
 }
 
-ul{
+#toolIcon ul{
   width: 100%;
   margin: 0;
 }
 
-li{
+#toolIcon ul li{
   display: inline-block;
   width: 30%;
   margin: 0;
 }
 
-#mainForm {
-  padding: 0;
-}
-a {
+#toolIcon ul li a {
   display: block;
   text-align: center;
   text-decoration: none;
@@ -43,14 +44,22 @@ a {
   color: black;
 }
 
-a img{
+#toolIcon ul li a img{
   width: 50%;
   border-radius:8em;
 }
 
-a p {
+#toolIcon ul li a p {
   margin: 0;
 }
 
+#mainForm {
+  padding: 0;
+}
+
+
+#content {
+  min-height:90%;
+}
 
 

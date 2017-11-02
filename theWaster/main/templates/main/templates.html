@@ -27,7 +27,7 @@
     </div>
     <ul class="menu">
       <li><a href=#> 聊聊</a></li>
-      <li><a href=#> 帖子</a></li>
+      <li id=part><a href=#> 帖子</a></li>
       <li><a href=#> 遊戲</a></li>
     </ul>
     <ul class=account>
@@ -37,18 +37,65 @@
     <div class=clear></div>
   </header>
   
+  <div id=son>
+    <ul>
+      <li><a href=# >朝陽帖1</a></li>
+      <li><a href=# >亞大帖</a></li>
+      <li><a href=# >中科帖</a></li>
+      <li><a href=# >修平帖</a></li>
+    </ul>
+    <ul>
+      <li><a href=# >朝陽帖</a></li>
+      <li><a href=# >亞2大帖</a></li>
+      <li><a href=# >中科帖</a></li>
+      <li><a href=# >修平帖</a></li>
+    </ul>
+    <ul>
+      <li><a href=# >朝陽帖</a></li>
+      <li><a href=# >亞3大帖</a></li>
+      <li><a href=# >中科帖</a></li>
+      <li><a href=# >修平帖</a></li>
+    </ul>
+    <ul>
+      <li><a href=# >朝陽帖</a></li>
+      <li><a href=# >亞大帖</a></li>
+      <li><a href=# >中4科帖</a></li>
+      <li><a href=# >修平帖</a></li>
+    </ul>
+    <ul>
+      <li><a href=# >朝陽帖</a></li>
+      <li><a href=# >亞大帖</a></li>
+      <li><a href=# >中5科帖</a></li>
+      <li><a href=# >修平帖</a></li>
+    </ul>
+    <ul>
+      <li><a href=# >朝6陽帖</a></li>
+      <li><a href=# >亞大帖</a></li>
+      <li><a href=# >中科帖</a></li>
+      <li><a href=# >修平帖</a></li>
+    </ul>
+    <ul>
+      <li><a href=# >朝陽帖</a></li>
+      <li><a href=# >亞大帖</a></li>
+      <li><a href=# >中7科帖</a></li>
+      <li><a href=# >修平帖</a></li>
+    </ul>
+    <div class=clear></div>
+  </div>
+  
   <div id=content>{% block content %}{% endblock %}</div>
   
   <footer>
-  <p style="color:#EEE;text-align:center;font-size:1.2em;">@ ailan12345, ballfish, shunmao</p>
-  <ul style="color:#DDD;text-align:center">
-  <li style="display: inline-block;"><a href=#> 聯絡我們</a></li>
-  <li style="display: inline-block;"><a href=#> Q&A</a></li>
+  <ul>
+  <li><a href=#> 聯絡我們</a></li>
+  <li><a href=#> Q&A</a></li>
   </ul>
+  <p>@ ailan12345, ballfish, shunmao</p>
   </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="{% static 'main/js/mouseover.js' %}"></script>
 {% block script %}{% endblock %}
   
 </body>

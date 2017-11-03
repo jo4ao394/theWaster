@@ -1,17 +1,35 @@
 $(document).ready(function(){
   $("#part").mouseover(function(){
-    $("#son").fadeIn(0);
+    $(".partson").fadeIn(0);
   });
   
   $("#part").mouseout(function(){
-    $("#son").fadeOut();
-    $("#son").mouseover(function(){
-      $("#son").stop(true);
-      $("#son").fadeIn(0);
+    $(".partson").fadeOut();
+    $(".partson").mouseover(function(){
+      $(".partson").stop(true);
+      $(".partson").fadeIn(0);
     });
   });
   
-  $("#son").mouseout(function(){
-    $("#son").fadeOut(0);
+  $(".partson").mouseout(function(){
+    $(".partson").fadeOut(0);
+  });
+  
+  
+  
+  $("#game").mouseover(function(){
+    $(".gameson").fadeIn(0);
+  });
+  
+  $("#game").mouseout(function(){
+    $(".gameson").fadeOut();
+    $(".gameson").mouseover(function(){
+      $(".gameson").stop(true);
+      $(".gameson").fadeIn(0);
+    });
+  });
+  
+  $(".gameson").mouseout(function(){
+    $(".gameson").fadeOut(0);
   });
 });

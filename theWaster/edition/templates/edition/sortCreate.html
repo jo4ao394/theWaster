@@ -1,10 +1,14 @@
 {% extends "main/templates.html" %}
+{% load staticfiles %}
+{% block css %}
+<link rel=stylesheet href="{% static 'edition/css/sort.css' %}">
+{% endblock %}
 {% block content %}
 <h1>新增類別</h1> 
   <form method="post" action="{% url 'edition:sortCreate' %}">  
     {% csrf_token %}  
     {{ sortForm.as_p }}
-    <input class="btn btn-submit" type="submit" name="" value="新增">  
-    <a class="btn btn-black" href="{% url 'edition:edition' %}">放棄</a> 
+    <input type="submit" name="" value="新增">  
+    <a href="{% url 'edition:edition' %}">放棄</a> 
   </form>  
 {% endblock %}

@@ -1,4 +1,8 @@
 {% extends "main/templates.html" %}
+{% load staticfiles %}
+{% block css %}
+<link rel=stylesheet href="{% static 'edition/css/sort.css' %}">
+{% endblock %}
 {% block content %}
 {% for sort in sorts %}
 <p>{{ sort.sort }}</p>

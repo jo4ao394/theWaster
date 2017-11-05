@@ -2,24 +2,40 @@
   margin: 0;
 }
 
+.form a{
+  font-size: 1.4em;
+  display: block;
+  width:20%;
+  float: left;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  background: #eaeaea;
+}
+
+.form a:hover {
+  background: rgba(150,150,150,0.8);
+}
+
 form {
-  margin-left: 2em;
+  margin: 0 1em;
 }
 
 form p {
-  font-size: 1.5em;
-  margin: 0;
-}
-
-form input {
   font-size: 1.2em;
-  margin-top: 1em;
-  background-color: #fff;
-  width: 50%;
+  margin-top: 0.5em;
+  color: #fff;
 }
 
-.btn{
+form input:not([type="submit"]) {
+  font-size: 1.2em;
+  background-color: #fff;
+  position: absolute;
+  left: 5em;
+}
+
+input[type="submit"]{
   float: right;
   width: 20%;
+  font-size: 1.4em;
 }
-

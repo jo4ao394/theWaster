@@ -24,7 +24,7 @@ urlpatterns = [
     url(r'^edition/', include('edition.urls', namespace='edition')),
     url(r'^game/', include('game.urls', namespace='game')),
     url(r'^main/', include('main.urls', namespace='main')),
-    url(r'^.*', include('main.urls')),
+    url(r'^.*', include('account.urls')),
 ]
     
     

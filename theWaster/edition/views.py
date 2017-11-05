@@ -2,16 +2,30 @@ from django.contrib import messages
 from django.shortcuts import render, redirect, get_object_or_404
 
 from edition.forms import EditionForm, SortForm
-from edition.models import Edition
+from edition.models import Edition, Sort
 
 
-def sort(request): 
-    return render(request, 'edition/sort.html') 
+def sort(request):
+    sorts = Sort.objects.all()
+    return render(request, 'edition/sort.html',{'sorts':sorts}) 
 
 
 def edition(request): 
     context = {} 
     return render(request, 'edition/edition.html', context) 
+
+
+def sortCreate(request): 
+    template = 'edition/sortCreate.html' 
+    if request.method == 'GET': 
+        return render(request, template, {'sortForm':SortForm()}) 
+    # POST 
+    sortForm = SortForm(request.POST) 
+    if not sortForm.is_valid(): 
+        return render(request, template, {'sortForm':SortForm}) 
+    sortForm.save() 
+    messages.success(request, '類別已新增\o/') 
+    return redirect('edition:sort') 
 
 
 def editionCreate(request): 
@@ -26,18 +40,17 @@ def editionCreate(request):
     messages.success(request, '版域已新增\o/') 
     return redirect('edition:edition') 
 
-def sortCreate(request): 
-    template = 'edition/sotrtCreate.html' 
-    if request.method == 'GET': 
-        return render(request, template, {'sortForm':SortForm()}) 
-    # POST 
-    sortForm = SortForm(request.POST) 
-    if not sortForm.is_valid(): 
-        return render(request, template, {'sortForm':SortForm}) 
-    sortForm.save() 
-    messages.success(request, '類別已新增\o/') 
-    return redirect('edition:sort') 
 
+def sortUpdate(request,sortId): 
+    template = 'edition/sortUpdate.html' 
+    sort = get_object_or_404(sort,id=sortId) 
+    #POST
+    sortForm = SortForm(request.POST, instance=sort) 
+    if not sortForm.is_valid(): 
+        return render(request, template, {'sortForm':sortForm}) 
+    sortForm.save() 
+    messages.success(request, '修改成功')  
+    return redirect('edition:sort') 
 
 
 def editionUpdate(request,editionId): 
@@ -52,13 +65,4 @@ def editionUpdate(request,editionId):
     return redirect('edition:edition') 
 
 
-def sortUpdate(request,sortId): 
-    template = 'edition/sortUpdate.html' 
-    sort = get_object_or_404(sort,id=sortId) 
-    #POST
-    sortForm = SortForm(request.POST, instance=sort) 
-    if not sortForm.is_valid(): 
-        return render(request, template, {'sortForm':sortForm}) 
-    sortForm.save() 
-    messages.success(request, '修改成功')  
-    return redirect('edition:sort') 
+

@@ -5,8 +5,12 @@ from edition import views
 
 urlpatterns = [
     url(r'^$', views.edition, name='edition'),
+    url(r'^sort/$', views.sort, name='sort'),
     
-    url(r'^editionCreate/$', views.editionCreate, name='editionCreate'), 
+    url(r'^sortCreate/$', views.sortCreate, name='sortCreate'), 
+    url(r'^editionCreate/$', views.editionCreate, name='editionCreate'),
     
+    url(r'^sortUpdate/(?P<editionId>[0-9]+)/$', views.sortUpdate, name='sortUpdate'),
     url(r'^editionUpdate/(?P<editionId>[0-9]+)/$', views.editionUpdate, name='editionUpdate'),
+
 ]

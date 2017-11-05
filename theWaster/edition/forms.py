@@ -16,7 +16,8 @@ class SortForm(forms.ModelForm):
 class EditionForm(forms.ModelForm): 
     sort = forms.ModelChoiceField(label='類別',queryset=Sort)
     edition = forms.CharField(label='版名', max_length=128)
-    user = forms.MultipleChoiceField(label='板主', queryset=User.objects) 
+    user = forms.ModelMultipleChoiceField(label='板主', queryset=User.objects.all()) 
+
 
     class Meta: 
         model = Edition 
@@ -24,7 +25,7 @@ class EditionForm(forms.ModelForm):
          
 
 class ArticleForm(forms.ModelForm):
-    edition = forms.ModelChoiceField(label='版別',queryset=Edition)
+    edition = forms.ModelChoiceField(label='版別',queryset=Edition.objects.all())
     title = forms.CharField(label='標題', max_length=128)
     content = forms.CharField(label='內容', widget=forms.Textarea)
 

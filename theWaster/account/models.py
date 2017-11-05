@@ -4,7 +4,7 @@ from django.db import models
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, related_name='userProfile')
-    name = models.CharField(max_length=128) # 姓名
+    name = models.CharField(max_length=128) # 暱稱
     sex = models.CharField(max_length=128) # 性別
     birthdate = models.DateField() # 生日
     introduction = models.TextField(blank=True, null=True) # *自我介紹
@@ -13,3 +13,6 @@ class UserProfile(models.Model):
     isEmailVerified = models.BooleanField(default=False) # Email驗證
     def __str__(self):
         return self.name + '(' + self.user.username + ')'
+    
+    
+    

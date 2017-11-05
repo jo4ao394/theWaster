@@ -1,0 +1,11 @@
+{% extends "main/main.html" %}
+{% block forms %}
+<form method="post" action="{% url 'account:login' %}">
+  {% csrf_token %}
+  <p>帳號：<input type="text" name="username"></p>
+  <p>密碼：<input type="password" name="password"></p>
+  <a href="{% url 'account:register' %}">註冊</a>
+  <input type="submit" value="送出">
+  <div class=clear></div>
+</form>
+{% endblock %}

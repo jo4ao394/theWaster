@@ -29,7 +29,7 @@ def sortCreate(request):
         return render(request, template, {'sortForm':SortForm}) 
     sortForm.save() 
     messages.success(request, '類別已新增\o/') 
-    return redirect('edition:sort') 
+    return redirect('edition:sortEdition') 
 
 
 def editionCreate(request): 
@@ -39,10 +39,10 @@ def editionCreate(request):
     # POST 
     editionForm = EditionForm(request.POST) 
     if not editionForm.is_valid(): 
-        return render(request, template, {'editionForm':EditionForm}) 
+        return render(request, template, {'editionForm':editionForm}) 
     editionForm.save() 
     messages.success(request, '版域已新增\o/') 
-    return redirect('edition:edition') 
+    return redirect('edition:sortEdition') 
 
 
 def sortUpdate(request,sortId): 
@@ -54,7 +54,7 @@ def sortUpdate(request,sortId):
         return render(request, template, {'sortForm':sortForm}) 
     sortForm.save() 
     messages.success(request, '修改成功')  
-    return redirect('edition:edition') 
+    return redirect('edition:sortEdition') 
 
 
 def editionUpdate(request,editionId): 
@@ -66,7 +66,7 @@ def editionUpdate(request,editionId):
         return render(request, template, {'editionForm':editionForm}) 
     editionForm.save() 
     messages.success(request, '修改成功')  
-    return redirect('edition:edition') 
+    return redirect('edition:sortEdition') 
 
 
 

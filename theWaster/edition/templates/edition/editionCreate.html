@@ -9,6 +9,6 @@
     {% csrf_token %}  
     {{ editionForm.as_p }}
     <input type="submit" name="" value="新增">  
-    <a href="{% url 'edition:edition' %}">放棄</a> 
+    <a href="{% url 'edition:sortEdition' %}">放棄</a> 
   </form>  
 {% endblock %}

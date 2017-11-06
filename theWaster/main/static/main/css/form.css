@@ -34,6 +34,10 @@ form input:not([type="submit"]) {
   left: 5em;
 }
 
+form input#id_emailVerifyCode {
+  width: 15%;
+}
+
 input[type="submit"]{
   float: right;
   width: 20%;

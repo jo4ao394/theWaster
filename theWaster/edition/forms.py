@@ -14,7 +14,7 @@ class SortForm(forms.ModelForm):
 
 
 class EditionForm(forms.ModelForm): 
-    sort = forms.ModelChoiceField(label='類別',queryset=Sort)
+    sort = forms.ModelChoiceField(label='類別',queryset=Sort.objects.all())
     edition = forms.CharField(label='版名', max_length=128)
     user = forms.ModelMultipleChoiceField(label='板主', queryset=User.objects.all()) 
 

@@ -1,20 +1,24 @@
 from django.contrib import messages
 from django.shortcuts import render, redirect, get_object_or_404
+from django.template.context_processors import request
 
 from edition.forms import EditionForm, SortForm
-from edition.models import Edition, Sort
+from edition.models import Edition, Sort, Article
 
 
-def sort(request):
+def sortEdition(request):
     sorts = Sort.objects.all()
-    return render(request, 'edition/sort.html',{'sorts':sorts}) 
+    editions = Edition.objects.all()
+    return render(request, 'edition/sortEdition.html',{'sorts':sorts, 'editions':editions}) 
 
 
-def edition(request): 
-    context = {} 
-    return render(request, 'edition/edition.html', context) 
 
 
+def article(request):
+    article = Article.objects.all()
+    return render(request, 'edition/article.html', {'article':article}) 
+
+    
 def sortCreate(request): 
     template = 'edition/sortCreate.html' 
     if request.method == 'GET': 
@@ -43,14 +47,14 @@ def editionCreate(request):
 
 def sortUpdate(request,sortId): 
     template = 'edition/sortUpdate.html' 
-    sort = get_object_or_404(sort,id=sortId) 
+    sort = get_object_or_404(Sort,id=sortId) 
     #POST
     sortForm = SortForm(request.POST, instance=sort) 
     if not sortForm.is_valid(): 
         return render(request, template, {'sortForm':sortForm}) 
     sortForm.save() 
     messages.success(request, '修改成功')  
-    return redirect('edition:sort') 
+    return redirect('edition:edition') 
 
 
 def editionUpdate(request,editionId): 

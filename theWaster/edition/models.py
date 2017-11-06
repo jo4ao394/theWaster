@@ -10,7 +10,7 @@ class Sort(models.Model):
 class Edition(models.Model):
     sort = models.ForeignKey(Sort) 
     edition = models.CharField(max_length=128) #版名
-    user = models.ManyToManyField(User)  #板主
+    user = models.ManyToManyField(User, null=True, blank=True)  #板主
 
     def __str__(self):
         return self.edition

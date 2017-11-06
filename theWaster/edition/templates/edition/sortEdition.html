@@ -1,0 +1,16 @@
+{% extends "main/templates.html" %}
+{% load staticfiles %}
+{% block css %}
+<link rel=stylesheet href="{% static 'edition/css/sort.css' %}">
+{% endblock %}
+{% block content %}
+  {% for sort in sorts %}
+  <p>{{ sort.sort }}</p>
+    {% for edition in editions %}
+      {% if edition.sort == sort %}
+      <p>{{ edition.edition }}</p>
+      {% endif %}
+    {% endfor %}
+    <hr>
+  {% endfor %}
+{% endblock %}

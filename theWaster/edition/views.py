@@ -14,8 +14,8 @@ def sortEdition(request):
 
 
 
-def article(request, articleName):
-    article = Article.objects.all()
+def article(request, editionName):
+    article = Article.objects.filter(edition=editionName)
     return render(request, 'edition/article.html', {'article':article}) 
 
     

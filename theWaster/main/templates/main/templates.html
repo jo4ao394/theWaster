@@ -38,97 +38,15 @@
   </header>
   
   <div id=son class=partson>
-    <ul>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-    </ul>
-    <ul>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-    </ul>
-    <ul>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-    </ul>
-    <ul>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-    </ul>
-    <ul>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-    </ul>
-    <ul>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-    </ul>
-    <ul>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-    </ul>
-    <ul>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-    </ul>
-    <ul>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-    </ul>
-    <ul>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-    </ul>
-    <ul>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-    </ul>
-    <ul>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-    </ul>
-    <ul>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-    </ul>
-    <ul>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-    </ul>
-    <ul>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-      <li><a href=#>朝陽版</a></li>
-    </ul>
-    
+  {% for sort in sorts %}
+    <ul>{{ sort.sort }}
+      {% for edition in editions %}
+        {% if edition.sort == sort %}
+        <li><a href=#>{{ edition.edition }}</a></li>
+        {% endif %}
+      {% endfor %}
+      </ul>
+  {% endfor %}    
     <div class=clear></div>
   </div>
   

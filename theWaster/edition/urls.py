@@ -12,4 +12,6 @@ urlpatterns = [
     url(r'^sortUpdate/(?P<editionId>[0-9]+)/$', views.sortUpdate, name='sortUpdate'),
     url(r'^editionUpdate/(?P<editionId>[0-9]+)/$', views.editionUpdate, name='editionUpdate'),
 
+
+    url(r'^article/(?P<articleName>)/$', views.article, name='article'),
 ]

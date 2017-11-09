@@ -6,5 +6,7 @@
 {% block content %}
   <a href="{% url 'edition:sortCreate' %}">新增類別</a> 
   <a href="{% url 'edition:editionCreate' %}">新增版</a> 
-  
+  {% for article in articleList %}
+  {{ article.user }}
+  {% endfor %}
 {% endblock %}

@@ -42,7 +42,7 @@
     <ul>{{ sort.sort }}
       {% for edition in EDITION %}
         {% if edition.sort == sort %}
-        <li><a href={% url 'edition:article' edition.edition %}>{{ edition.edition }}</a></li>
+        <li><a href={% url 'edition:article' edition.id %}>{{ edition.edition }}</a></li>
         {% endif %}
       {% endfor %}
       </ul>

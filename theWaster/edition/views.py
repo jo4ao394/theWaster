@@ -14,9 +14,9 @@ def sortEdition(request):
 
 
 
-def article(request, editionName):
-    article = Article.objects.filter(edition=editionName)
-    return render(request, 'edition/article.html', {'article':article}) 
+def article(request, editionId):
+    articleList = Article.objects.filter(edition=editionId)
+    return render(request, 'edition/article.html', {'articleList':articleList}) 
 
     
 def sortCreate(request): 

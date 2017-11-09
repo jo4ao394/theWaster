@@ -13,5 +13,5 @@ urlpatterns = [
     url(r'^editionUpdate/(?P<editionId>[0-9]+)/$', views.editionUpdate, name='editionUpdate'),
 
 
-    url(r'^article/(?P<editionName>)/$', views.article, name='article'),
+    url(r'^article/(?P<editionId>[0-9]+)/$', views.article, name='article'),
 ]

@@ -1,8 +1,8 @@
 from edition.models import Sort, Edition
 
 
-SORT = Sort.objects.all()
-EDITION = Edition.objects.all()
+SORT = Sort.objects.filter(disabled=False)
+EDITION = Edition.objects.filter(disabled=False)
 
 
 # Constants available for templates

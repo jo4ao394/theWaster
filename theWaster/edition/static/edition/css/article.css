@@ -1,0 +1,67 @@
+div#article {
+  margin: 2em 10%;
+  width: 80%;
+  background: #fff;
+  border-radius: 1em;
+  border: 1px solid #000;
+}
+
+div#articleAccount {
+  width: 10%;
+  float: left;
+  border-right: 1px solid #000;
+}
+
+div#articleHead {
+  width: 100px;
+  height: 180px;
+}
+
+div#articleTitle {
+  width: 60%;
+  float: left;
+  padding: 1em;
+}
+
+div#articleDateTime {
+  width: 30%;
+  float: left;
+  padding: 1em;
+  text-align: center;
+  border-left: 1px solid #000;
+}
+
+div#articleUser {
+  border-top: 1px solid #000;
+  padding: 1em;
+  text-align: center;
+}
+
+div#articleContent {
+  width: 90%;
+  float: left;
+  padding: 1em;
+  border-top: 1px solid #000;
+}
+
+div#articleBtn{
+  width: 20%;
+  float: right;
+  margin-right: 10%;
+  margin-top: 1em;
+}
+
+div#articleBtn a {
+  display: inline-block;
+  color: #0f0;
+  text-decoration: none;
+  font-size: 1.5em;
+  border: 2px solid #0f0;
+  padding: 0.5em 1em;
+  margin-left: 1em;
+  box-shadow: 1px 1px #fff;
+}
+
+
+
+

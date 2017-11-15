@@ -39,7 +39,8 @@
   
   <div id=son class=partson>
   {% for sort in SORT %}
-    <ul>{{ sort.sort }}
+    <ul>
+    <p>{{ sort.sort }}</p>
       {% for edition in EDITION %}
         {% if edition.sort == sort %}
         <li><a href={% url 'edition:article' edition.id %}>{{ edition.edition }}</a></li>

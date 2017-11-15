@@ -1,12 +1,27 @@
 {% extends "main/templates.html" %}
 {% load staticfiles %}
 {% block css %}
-<link rel=stylesheet href="{% static 'edition/css/sort.css' %}">
+<link rel=stylesheet href="{% static 'edition/css/article.css' %}">
 {% endblock %}
 {% block content %}
+
+<div id=articleBtn>
   <a href="{% url 'edition:sortCreate' %}">新增類別</a> 
   <a href="{% url 'edition:editionCreate' %}">新增版</a> 
+</div>
+ <div class=clear></div>
+
   {% for article in articleList %}
-  {{ article.user }}
+  <div id=article>
+  <div id=articleAccount>
+  <div id=articleHead><img src="{% static 'main/static/main/img/account.png' %}"></div>
+  <div id=articleUser>{{ article.user }}</div>
+  </div>
+  <div id=articleTitle>{{ article.title }}</div>
+  <div id=articleDateTime>{{ article.dateTime }}</div>
+  <div id=articleContent>{{ article.content }}</div>
+  <div class=clear></div>
+  </div>
   {% endfor %}
+<br><br>
 {% endblock %}

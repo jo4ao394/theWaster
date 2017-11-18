@@ -10,11 +10,10 @@
   <a href="{% url 'edition:editionCreate' %}">新增版</a> 
 </div>
  <div class=clear></div>
-
-  {% for article in articleList %}
+  {% for article in articleList %}  
   <div id=article>
   <div id=articleAccount>
-  <div id=articleHead><img src="{% static 'main/static/main/img/account.png' %}"></div>
+  <div id=articleHead><img src="{{ article.user.image }}"></div>
   <div id=articleUser>{{ article.user }}</div>
   </div>
   <div id=articleTitle>{{ article.title }}</div>

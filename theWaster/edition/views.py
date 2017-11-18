@@ -2,8 +2,10 @@ from django.contrib import messages
 from django.shortcuts import render, redirect, get_object_or_404
 from django.template.context_processors import request
 
+from account.models import UserProfile
 from edition.forms import EditionForm, SortForm
 from edition.models import Edition, Sort, Article
+
 
 sorts = Sort.objects.all()
 editions = Edition.objects.all()
@@ -16,6 +18,15 @@ def sortEdition(request):
 
 def article(request, editionId):
     articleList = Article.objects.filter(edition=editionId)
+    '''
+    userList=[]
+    for article in articleList:
+        userL = get_object_or_404(UserProfile, name = article.user)
+        if userL:
+            userList.append(userL)
+        else:
+            userList.append('')
+    '''       
     return render(request, 'edition/article.html', {'articleList':articleList}) 
 
     

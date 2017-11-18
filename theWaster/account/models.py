@@ -6,6 +6,7 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User, related_name='userProfile')
     name = models.CharField(max_length=128) # 暱稱
     sex = models.CharField(max_length=128) # 性別
+    image = models.CharField(max_length=128, default='http://images.uncyc.org/zh-tw/3/32/Nobody%E9%A0%AD%E5%83%8F.jpg')
     birthdate = models.DateField() # 生日
     introduction = models.TextField(blank=True, null=True) # *自我介紹
     lavel = models.IntegerField() # 經驗

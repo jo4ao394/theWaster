@@ -1,6 +1,9 @@
 from django.contrib.auth.models import User
 from django.db import models
 
+from account.models import UserProfile
+
+
 class Sort(models.Model):
     sort = models.CharField(max_length=128) #類別
     disabled = models.BooleanField(default=False) #啟用停用
@@ -20,7 +23,7 @@ class Edition(models.Model):
     
 class Article(models.Model):
     edition = models.ForeignKey(Edition)
-    user = models.CharField(max_length=128) #發文者
+    user = models.ForeignKey(UserProfile) #發文者
     title = models.CharField(max_length=128) #標題
     content = models.TextField() #內容
     dateTime = models.DateTimeField() #發表時間

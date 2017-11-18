@@ -6,6 +6,7 @@ from edition.models import Edition, Sort, Article, Comment
 
 class SortForm(forms.ModelForm):
     sort = forms.CharField(label='類別', max_length=64)
+    disabled = forms.ChoiceField(label='啟用停用', choices=((True,'啟用'),(False,'停用')),  widget = forms.RadioSelect())
 
 
     class Meta: 
@@ -17,6 +18,7 @@ class EditionForm(forms.ModelForm):
     sort = forms.ModelChoiceField(label='類別',queryset=Sort.objects.all())
     edition = forms.CharField(label='版名', max_length=128)
     user = forms.ModelMultipleChoiceField(label='板主', queryset=User.objects.all()) 
+    disabled = forms.ChoiceField(label='啟用停用', choices=((True,'啟用'),(False,'停用')),  widget = forms.RadioSelect())
 
 
     class Meta: 

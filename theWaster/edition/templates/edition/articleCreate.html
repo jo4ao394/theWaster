@@ -1,0 +1,14 @@
+{% extends "main/templates.html" %}
+{% load staticfiles %}
+{% block css %}
+<link rel=stylesheet href="{% static 'edition/css/sort.css' %}">
+{% endblock %}
+{% block content %}
+<h1>發文</h1> 
+  <form method="post" action="{% url 'edition:articleCreate' %}">  
+    {% csrf_token %}  
+    {{ articleForm.as_p }}
+    <input type="submit" name="" value="新增">  
+    <a href="{% url 'edition:sortEdition' %}">放棄</a> 
+  </form>  
+{% endblock %}

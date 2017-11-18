@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.template.context_processors import request
 
 from account.models import UserProfile
-from edition.forms import EditionForm, SortForm
+from edition.forms import EditionForm, SortForm, ArticleForm
 from edition.models import Edition, Sort, Article
 
 
@@ -18,15 +18,7 @@ def sortEdition(request):
 
 def article(request, editionId):
     articleList = Article.objects.filter(edition=editionId)
-    '''
-    userList=[]
-    for article in articleList:
-        userL = get_object_or_404(UserProfile, name = article.user)
-        if userL:
-            userList.append(userL)
-        else:
-            userList.append('')
-    '''       
+
     return render(request, 'edition/article.html', {'articleList':articleList}) 
 
     
@@ -53,6 +45,19 @@ def editionCreate(request):
         return render(request, template, {'editionForm':editionForm}) 
     editionForm.save() 
     messages.success(request, '版域已新增\o/') 
+    return redirect('edition:sortEdition') 
+
+
+def articleCreate(request):#未完成
+    template = 'edition/articleCreate.html' 
+    if request.method == 'GET': 
+        return render(request, template, {'articleForm':ArticleForm()}) 
+    # POST 
+    articleForm = ArticleForm(request.POST) 
+    if not articleForm.is_valid(): 
+        return render(request, template, {'articleForm':articleForm}) 
+    articleForm.save() 
+    messages.success(request, '發文成功') 
     return redirect('edition:sortEdition') 
 
 

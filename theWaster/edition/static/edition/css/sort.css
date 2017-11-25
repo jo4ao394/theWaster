@@ -1,0 +1,46 @@
+#btn {
+  margin-top: 1em;
+  margin-right: 10%;
+  float: right;
+}
+
+a.btn {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 2em;
+  background: #acaf33;
+  text-align: center;
+  float: left;
+  padding: 0.5em 2em;
+  font-size: 1.2em;
+  min-width: 120px;
+}
+
+#allSort {
+  margin: 0 10%;
+  width: 80%;
+}
+
+#sort { 
+  border: 1px solid #fff;
+  width: 33%;
+  float: left;
+}
+
+#sortName {
+  
+}
+
+#sortName p {
+  color: #0ff;
+  font-size: 1.5em;
+}
+
+#editionMame {
+  
+}
+
+#editionName p {
+  color: #fff;
+}

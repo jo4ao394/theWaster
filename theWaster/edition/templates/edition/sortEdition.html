@@ -4,14 +4,24 @@
 <link rel=stylesheet href="{% static 'edition/css/sort.css' %}">
 {% endblock %}
 {% block content %}
-  <a href="{% url 'edition:sortCreate' %}">新增類別</a> 
-  <a href="{% url 'edition:editionCreate' %}">新增版</a> 
+<div id=btn>
+  <a class=btn href="{% url 'edition:sortCreate' %}">新增類別</a> 
+  <a class=btn href="{% url 'edition:editionCreate' %}">新增版</a>
+  <div class=clear></div> 
+</div>
+<div class=clear></div> 
+<br>
+  <div id=allSort>
   {% for sort in SORT %}
-  <p>{{ sort.sort }}</p>
+  <div id=sort>
+  <div id=sortName><p>{{ sort.sort }}</p></div>
     {% for edition in EDITION %}
       {% if edition.sort == sort %}
-      <p>{{ edition.edition }}</p>
+      <div id=editionName><p>{{ edition.edition }}</p></div>
       {% endif %}
     {% endfor %}
+  </div>
   {% endfor %}
+  <div class=clear></div>
+  </div><br><br>
 {% endblock %}

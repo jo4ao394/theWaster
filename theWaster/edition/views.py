@@ -18,8 +18,8 @@ def sortEdition(request):
 
 def article(request, editionId):
     articleList = Article.objects.filter(edition=editionId)
-
-    return render(request, 'edition/article.html', {'articleList':articleList}) 
+    
+    return render(request, 'edition/article.html', {'articleList':articleList, 'editionId':editionId}) 
 
     
 def sortCreate(request): 

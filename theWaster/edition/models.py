@@ -14,7 +14,7 @@ class Sort(models.Model):
 class Edition(models.Model):
     sort = models.ForeignKey(Sort) 
     edition = models.CharField(max_length=128) #版名
-    user = models.ManyToManyField(User, null=True, blank=True)  #板主
+    user = models.ManyToManyField(User)  #板主
     disabled = models.BooleanField(default=False) #啟用停用
 
     def __str__(self):
@@ -23,7 +23,7 @@ class Edition(models.Model):
     
 class Article(models.Model):
     edition = models.ForeignKey(Edition)
-    user = models.ForeignKey(UserProfile) #發文者
+    user = models.ForeignKey(User, related_name='Po') #發文者
     title = models.CharField(max_length=128) #標題
     content = models.TextField() #內容
     dateTime = models.DateTimeField() #發表時間
@@ -35,7 +35,7 @@ class Article(models.Model):
 
 class Comment(models.Model):
     article = models.ForeignKey(Article) 
-    user =  models.CharField(max_length=128) #留言者
+    user =   models.ForeignKey(User, related_name='PoC') #留言者
     content = models.TextField() #內容
     dateTime = models.DateTimeField() #留言時間
     bad = models.ManyToManyField(User) #廢

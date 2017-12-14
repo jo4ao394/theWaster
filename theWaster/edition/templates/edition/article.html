@@ -10,6 +10,7 @@
   <a href="{% url 'edition:editionCreate' %}">新增版</a>
   <a href="{% url 'edition:articleCreate' %}">發文</a>
 </div>
+  <h1 style="color:red;">{{ editionId }}</h1>
  <div class=clear></div>
   {% for article in articleList %}  
   <div id=article>

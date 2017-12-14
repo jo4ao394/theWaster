@@ -27,13 +27,13 @@ class EditionForm(forms.ModelForm):
          
 
 class ArticleForm(forms.ModelForm):
-    edition = forms.ModelChoiceField(label='版別',queryset=Edition.objects.all())
+    #edition = forms.ModelChoiceField(label='版別',queryset=Edition.objects.all())
     title = forms.CharField(label='標題', max_length=128)
     content = forms.CharField(label='內容', widget=forms.Textarea)
 
     class Meta:
         model = Article
-        fields = ['edition', 'title', 'content']
+        fields = ['title', 'content']
 
 
 class CommentForm(forms.ModelForm):

@@ -1,0 +1,6 @@
+django
+psycopg2
+django-toolbelt
+boto3
+newrelic
+rollbar
